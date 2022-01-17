@@ -1,0 +1,184 @@
+@font-face {
+  font-family: thin;
+  src: url("/src/thin.otf");
+}
+
+@font-face {
+  font-family: bold;
+  src: url("/src/bold.otf");
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 21.5%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  .staypired {
+    max-width: 150px;
+  }
+
+  .smile {
+    right: 0px !important;
+    top: 0px !important;
+    transform: rotate(30deg);
+
+    max-width: 15px;
+    max-height: 15px;
+  }
+
+  video {
+    min-height: 130%;
+  }
+
+  .supercool {
+    font-size: 18px !important;
+  }
+}
+
+:root {
+  --bg-color: black;
+  --typewriterSpeed: 3s;
+  --typewriterCharacters: 30;
+}
+
+@-webkit-keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+@-webkit-keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+@-webkit-keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.supercool {
+  font-size: 32px;
+
+  position: relative;
+
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.supercool::before,
+.supercool::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.supercool::before {
+  background: var(--bg-color);
+  -webkit-animation: typewriter var(--typewriterSpeed)
+    steps(var(--typewriterCharacters)) 1s forwards;
+  animation: typewriter var(--typewriterSpeed)
+    steps(var(--typewriterCharacters)) 1s forwards;
+}
+
+.supercool::after {
+  width: 0.125em;
+  background: white;
+  -webkit-animation: typewriter var(--typewriterSpeed)
+      steps(var(--typewriterCharacters)) 1s forwards,
+    blink 750ms steps(var(--typewriterCharacters)) infinite;
+  animation: typewriter var(--typewriterSpeed)
+      steps(var(--typewriterCharacters)) 1s forwards,
+    blink 750ms steps(var(--typewriterCharacters)) infinite;
+}
+
+.social {
+  margin-top: 50px;
+}
+
+.social svg {
+  cursor: pointer;
+  fill: white;
+  transition: 0.3s;
+}
+
+.social svg:hover {
+  opacity: 0.3;
+  transition: 0.3s;
+}
+
+.smile {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: 5px;
+  top: -5px;
+  transform: rotate(30deg);
+}
+
+.staypired {
+  position: relative;
+  width: 230px;
+  display: block;
+  margin: 0 auto;
+}
+
+body {
+  background: black;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+video {
+  position: fixed;
+  top: -200px;
+  width: 100%;
+  height: 120%;
+}
+
+h1 {
+  display: block;
+  margin: 0 auto;
+  color: white;
+}
+
+.content {
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 250px;
+  width: 100%;
+  text-align: center;
+}
