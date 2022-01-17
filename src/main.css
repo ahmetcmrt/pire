@@ -1,11 +1,11 @@
 @font-face {
   font-family: thin;
-  src: url("/src/thin.otf");
+  src: url("src/thin.otf");
 }
 
 @font-face {
   font-family: bold;
-  src: url("/src/bold.otf");
+  src: url("src/bold.otf");
 }
 
 @keyframes typing {
